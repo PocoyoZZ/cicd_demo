@@ -1,13 +1,13 @@
-name: Greeting from Pocoyo
-on: push
+name: Greeting from Pocoyo # workflow 的名称
+on: push # 指定触发条件
 
-jobs:
-  my_job:
-    name: My Job
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print a greeting
-        env:
+jobs: # 要执行的任务
+  my_job: # 其中的一项任务
+    name: My Job # 对于任务的说明
+    runs-on: ubuntu-latest # 指定运行需要的虚拟机环境
+    steps: # 当前任务的运行步骤
+      - name: Print a greeting # 步骤名称
+        env: # 此步骤所需的环境变量
           MY_VAR: Hi there! My name is
           FULL_NAME: Pocoyo
-        run: echo $MY_VAR $FULL_NAME
+        run: echo $MY_VAR $FULL_NAME #此步骤运行的命令

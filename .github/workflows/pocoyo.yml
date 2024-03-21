@@ -6,8 +6,8 @@ jobs:
     name: My Job
     runs-on: ubuntu-latest
     steps:
-      name: Print a greeting
-      env:
-        MY_VAR: Hi there! My name is
-        FULL_NAME: Pocoyo
-      run: echo $MY_VAR $FULL_NAME
+      - name: Print a greeting
+        env:
+          MY_VAR: Hi there! My name is
+          FULL_NAME: Pocoyo
+        run: echo $MY_VAR $FULL_NAME

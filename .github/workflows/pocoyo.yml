@@ -13,7 +13,7 @@ jobs: # 要执行的任务
         run: echo $MY_VAR $FULL_NAME #此步骤运行的命令
 eslint:
   runs-on: ubuntu-latest
-    steps:
+  steps:
     - name: Checkout code
       uses: actions/checkout@v2
     - name: Set up Node.js

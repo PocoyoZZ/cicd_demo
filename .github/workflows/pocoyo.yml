@@ -11,16 +11,16 @@ jobs: # 要执行的任务
           MY_VAR: Hi there! My name is
           FULL_NAME: Pocoyo
         run: echo $MY_VAR $FULL_NAME #此步骤运行的命令
-  eslint:
-    runs-on: ubuntu-latest
-     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: 14
-      - name: Install dependencies
-        run: npm install
-      - name: Run ESLint
-        run: npx eslint .
+eslint:
+  runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+    - name: Install dependencies
+      run: npm install
+    - name: Run ESLint
+      run: npx eslint .
